@@ -13,4 +13,7 @@ if event == 'userlogin':
   # since it waits for the event process to die before proceding
   pid = os.fork()
   if pid == 0:
-    dbus_client.run();  
+    try:
+      dbus_client.run()
+    except KeyboardInterrupt:
+      pass
