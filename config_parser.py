@@ -4,7 +4,7 @@ pianobar_key_bindings = {}
 
 def pianobar_config_file():
   if "XDG_CONFIG_HOME" in os.environ:
-    config_path = os.environ("XDG_CONFIG_HOME")
+    config_path = os.environ["XDG_CONFIG_HOME"]
   else:
     config_path = os.path.expanduser("~/.config")
   return config_path + "/pianobar/config"
